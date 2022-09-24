@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Login() {
@@ -9,6 +9,8 @@ export default function Login() {
     const [user, setUser] = useState("");
     const [passwd, setPasswd] = useState("");
     const [errorLog, setErrorLog] = useState("");
+
+    
   };
 
   return (
@@ -23,3 +25,4 @@ export default function Login() {
     </div>
   );
 }
+ */

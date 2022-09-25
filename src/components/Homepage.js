@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Recipe from "./Recipe";
 // import Modal from './Modal'
 /* import axios from "axios"; */
 
@@ -28,11 +29,13 @@ const Homepage = () => {
   return (
     <div>
       <h1 className="homepage">Recipe Cloud</h1>
-      {/* <Modal title={recipe.title} /> */}
+      <Recipe request={"post"} />
       {recipes.map((recipe) => (
         <div className="recipesContainer">
           {recipe.recipe_name}{" "}
-          <div className="title">Title:{recipe.instructions}</div>
+          <div className="instructions">
+            Instructions: {recipe.instructions}
+          </div>
           <button onClick={() => deleteRecipes(recipe.id)}>Delete</button>
         </div>
       ))}

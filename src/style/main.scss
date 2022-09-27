@@ -1,6 +1,3 @@
-@import "./homepage.scss";
-@import "./media.scss";
-
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -22,6 +19,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
+    background-color: #277da1;
 }
 
 .app {
@@ -29,3 +27,7 @@ body {
     display: grid;
     justify-items: center;
 }
+
+
+@import './homepage.scss';
+@import "./media.scss";

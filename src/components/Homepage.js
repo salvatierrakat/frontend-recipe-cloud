@@ -29,16 +29,20 @@ const Homepage = () => {
   return (
     <div>
       <h1 className="homepage">Recipe Cloud</h1>
-      <Recipe request={"post"} />
-      {recipes.map((recipe) => (
-        <div className="recipesContainer">
-          {recipe.recipe_name}{" "}
-          <div className="instructions">
-            Instructions: {recipe.instructions}
+      <div className="page-container">
+        <Recipe request={"post"} />
+        {recipes.map((recipe) => (
+          <div className="recipesContainer">
+            {recipe.recipe_name}{" "}
+            <div className="instructions">
+              Instructions: {recipe.instructions}
+            </div>
+            <button type="button" onClick={() => deleteRecipes(recipe.id)}>
+              Delete
+            </button>
           </div>
-          <button onClick={() => deleteRecipes(recipe.id)}>Delete</button>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

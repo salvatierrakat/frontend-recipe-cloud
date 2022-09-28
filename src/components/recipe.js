@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 function Recipe(props) {
   const [recipe_name, setRecipe_name] = useState("");
   const [instructions, setInstructions] = useState("");
   const [requestType, setRequestType] = useState(props.request);
   const [request, setRequest] = useState("");
   const [endPoint, setEndPoint] = useState("");
-
   const handleSubmit = (event) => {
     fetch("https://dashboard.heroku.com/apps/still-retreat-82944/add", {
       method: "post",
@@ -27,7 +25,6 @@ function Recipe(props) {
         console.log(error);
       });
   };
-
   useEffect(() => {
     if (requestType === "add") {
       setEndPoint("https://dashboard.heroku.com/apps/still-retreat-82944/add");
@@ -62,5 +59,4 @@ function Recipe(props) {
     </div>
   );
 }
-
 export default Recipe;

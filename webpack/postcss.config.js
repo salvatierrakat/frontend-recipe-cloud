@@ -1,5 +1,9 @@
 module.exports = {
   plugins: {
-    'autoprefixer': {},
-  }
+    autoprefixer: {},
+  },
+
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
 };

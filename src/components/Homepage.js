@@ -7,7 +7,7 @@ const Homepage = () => {
   const [recipes, setRecipes] = useState([]);
 
   const getAllRecipes = () => {
-    fetch("http://127.0.0.1:5000/recipe")
+    fetch("https://dashboard.heroku.com/apps/still-retreat-82944")
       .then((res) => res.json())
       .then((res) => setRecipes(res));
   };
@@ -17,13 +17,13 @@ const Homepage = () => {
   }, []);
 
   const deleteRecipes = (id) => {
-    fetch(`http://127.0.0.1:5000/recipe/${id}`, { method: "DELETE" }).then(
-      (res) => {
-        console.log(res);
-        const deletedRecipes = recipes.filter((recipe) => recipe.id !== id);
-        setRecipes(deletedRecipes);
-      }
-    );
+    fetch(`https://dashboard.heroku.com/apps/still-retreat-82944`, {
+      method: "DELETE",
+    }).then((res) => {
+      console.log(res);
+      const deletedRecipes = recipes.filter((recipe) => recipe.id !== id);
+      setRecipes(deletedRecipes);
+    });
   };
 
   return (

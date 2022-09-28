@@ -17,7 +17,7 @@ const Homepage = () => {
   }, []);
 
   const deleteRecipes = (id) => {
-    fetch(`https://dashboard.heroku.com/apps/still-retreat-82944`, {
+    fetch(`https://dashboard.heroku.com/apps/still-retreat-82944/${id}`, {
       method: "DELETE",
     }).then((res) => {
       console.log(res);

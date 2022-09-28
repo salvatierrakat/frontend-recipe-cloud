@@ -8,7 +8,7 @@ function Recipe(props) {
   const [endPoint, setEndPoint] = useState("");
 
   const handleSubmit = (event) => {
-    fetch("https://dashboard.heroku.com/apps/still-retreat-82944", {
+    fetch("https://dashboard.heroku.com/apps/still-retreat-82944/add", {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -30,7 +30,7 @@ function Recipe(props) {
 
   useEffect(() => {
     if (requestType === "add") {
-      setEndPoint("https://dashboard.heroku.com/apps/still-retreat-82944");
+      setEndPoint("https://dashboard.heroku.com/apps/still-retreat-82944/add");
       setRequest("POST");
     } else console.log("hi");
     {

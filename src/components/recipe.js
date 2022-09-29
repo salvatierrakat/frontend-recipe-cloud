@@ -29,7 +29,7 @@ function Recipe(props) {
     if (requestType === "add") {
       setEndPoint("https://recipe-cloud-api.herokuapp.com/add");
       setRequest("POST");
-    } else console.log("hi");
+    } else console.log("Pizza");
     {
     }
   }, []);

@@ -6,7 +6,7 @@ function Recipe(props) {
   const [request, setRequest] = useState("");
   const [endPoint, setEndPoint] = useState("");
   const handleSubmit = (event) => {
-    fetch("https://dashboard.heroku.com/apps/still-retreat-82944/add", {
+    fetch("https://recipe-cloud-api.herokuapp.com/add", {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -27,7 +27,7 @@ function Recipe(props) {
   };
   useEffect(() => {
     if (requestType === "add") {
-      setEndPoint("https://dashboard.heroku.com/apps/still-retreat-82944/add");
+      setEndPoint("https://recipe-cloud-api.herokuapp.com/add");
       setRequest("POST");
     } else console.log("hi");
     {

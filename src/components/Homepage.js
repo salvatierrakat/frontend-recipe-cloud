@@ -7,7 +7,7 @@ const Homepage = () => {
   const [recipes, setRecipes] = useState([]);
 
   const getAllRecipes = () => {
-    fetch("https://dashboard.heroku.com/apps/still-retreat-82944")
+    fetch("https://recipe-cloud-api.herokuapp.com")
       .then((res) => res.json())
       .then((res) => setRecipes(res));
   };
@@ -17,7 +17,7 @@ const Homepage = () => {
   }, []);
 
   const deleteRecipes = (id) => {
-    fetch(`https://dashboard.heroku.com/apps/still-retreat-82944/${id}`, {
+    fetch(`https://recipe-cloud-api.herokuapp.com/${id}`, {
       method: "DELETE",
     }).then((res) => {
       console.log(res);

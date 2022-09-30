@@ -17,6 +17,7 @@ function Recipe(props) {
       }),
     })
       .then((response) => {
+        console.log(response);
         if (props.edit === true) {
           props.handleEditSubmit();
         }

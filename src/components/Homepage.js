@@ -5,17 +5,17 @@ const Homepage = () => {
   const [recipes, setRecipes] = useState([]);
 
   const getAllRecipes = () => {
-    fetch("https://recipe-cloud-api.herokuapp.com")
+    fetch("https://recipe-cloud-api.herokuapp.com/recipe")
       .then((res) => res.json())
       .then((res) => setRecipes(res));
   };
 
   useEffect(() => {
     getAllRecipes();
-  }, []);
+  }, [recipes]);
 
   const deleteRecipes = (id) => {
-    fetch(`https://recipe-cloud-api.herokuapp.com/${id}`, {
+    fetch(`https://recipe-cloud-api.herokuapp.com/recipe/${id}`, {
       method: "DELETE",
     }).then((res) => {
       console.log(res);

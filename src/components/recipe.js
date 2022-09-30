@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
+
 function Recipe(props) {
   const [recipe_name, setRecipe_name] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [requestType, setRequestType] = useState(props.request);
-  const [request, setRequest] = useState("");
-  const [endPoint, setEndPoint] = useState("");
+
   const handleSubmit = (event) => {
-    fetch("https://recipe-cloud-api.herokuapp.com/add", {
-      method: "post",
+    event.preventDefault();
+    fetch("https://recipe-cloud-api.herokuapp.com/recipe/add", {
+      method: "POST",
       headers: {
         "content-type": "application/json",
       },
@@ -25,14 +25,7 @@ function Recipe(props) {
         console.log(error);
       });
   };
-  useEffect(() => {
-    if (requestType === "add") {
-      setEndPoint("https://recipe-cloud-api.herokuapp.com/add");
-      setRequest("POST");
-    } else console.log("Pizza");
-    {
-    }
-  }, []);
+
   return (
     <div className="add-recipe-container">
       <h3>Add Recipe</h3>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
-// import Modal from './Modal'
-/* import axios from "axios"; */
 
 const Homepage = () => {
   const [recipes, setRecipes] = useState([]);
